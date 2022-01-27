@@ -30,7 +30,6 @@ public class MarkdownParse {
                  nextOpenBracket == -1  ) {
                      break;
                  }
-
             if(nextCloseBracket + 1 != openParen) {
                break;
             }
