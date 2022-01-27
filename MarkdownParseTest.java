@@ -73,6 +73,7 @@ public class MarkdownParseTest {
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         System.out.println(links);
         ArrayList<String> expected = new ArrayList<>();
+        expected.add("test.com")
         assertEquals(expected, links);
     }
 
@@ -105,5 +106,5 @@ public class MarkdownParseTest {
         ArrayList<String> expected = new ArrayList<>();
         assertEquals(expected, links);
     }
-    
+
 }
