@@ -47,12 +47,32 @@ public class MarkdownParseTest {
 
     @Test
     public void parseTest4() throws IOException {
-        Path fileName = Path.of("test-file3.md");
+        Path fileName = Path.of("test-file4.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         System.out.println(links);
         ArrayList<String> expected = new ArrayList<>();
         expected.add("https://something.com");
+        assertEquals(expected, links);
+    }
+
+    @Test
+    public void parseTest5() throws IOException {
+        Path fileName = Path.of("test-file5.md");
+	    String contents = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(contents);
+        System.out.println(links);
+        ArrayList<String> expected = new ArrayList<>();
+        assertEquals(expected, links);
+    }
+
+    @Test
+    public void parseTest6() throws IOException {
+        Path fileName = Path.of("test-file6.md");
+	    String contents = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(contents);
+        System.out.println(links);
+        ArrayList<String> expected = new ArrayList<>();
         assertEquals(expected, links);
     }
 
