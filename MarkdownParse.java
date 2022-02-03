@@ -30,9 +30,12 @@ public class MarkdownParse {
                  nextOpenBracket == -1  ) {
                      break;
                  }
-           if(nextCloseBracket + 1 == openParen && markdown.indexOf("!") != nextOpenBracket - 1){
+   
+           if(markdown.indexOf("!") != nextOpenBracket - 1 &&
+            openParen - nextCloseBracket == 1){
                toReturn.add(markdown.substring(openParen + 1, closeParen));
            }
+
             currentIndex = closeParen + 1;
         }
         return toReturn;
@@ -43,4 +46,3 @@ public class MarkdownParse {
         ArrayList<String> links = getLinks(contents);
         System.out.println(links);
     }
-}
