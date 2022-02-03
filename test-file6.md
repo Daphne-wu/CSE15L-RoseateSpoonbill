@@ -4,4 +4,5 @@
 
 paragraph
 
-(page.com)[test.com]
+(page.com)
+[link](test.com)
